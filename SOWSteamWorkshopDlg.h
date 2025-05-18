@@ -3,12 +3,6 @@
 
 #pragma once
 
-#ifdef SOWGB
-#define STEAM_APP_ID 3142400
-#else
-#define STEAM_APP_ID 2205330
-#endif
-
 //*****************************************************************************
 
 struct STag

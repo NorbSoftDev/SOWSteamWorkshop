@@ -8,6 +8,10 @@
 #include "SOWSteamWorkshopDlg.h"
 #include "afxdialogex.h"
 #include "uploader.h"
+#include <iostream>
+#include <iostream>
+#include <fstream>
+#include <string>
 
 #include "../Steam/public/steam/isteamugc.h"
 #include "../Steam/public/steam/steam_api.h"
@@ -34,6 +38,24 @@ STag gTags[] =
 };
 
 #define INIFILE "\\steam_sow_mod.ini"
+
+AppId_t getAppID()
+{
+	AppId_t appid;
+	char* buffer = new char[33]; // Include 1 more character in case of newline
+	std::ifstream file_appid("steam_appid.txt", std::ios::in);
+
+	// Read whatever we can
+	file_appid >> buffer;
+
+	// Get the app id. Note that AppId_t is typedef'd to uint32
+	sscanf(buffer, "%ud", &appid);
+
+	delete[] buffer;
+	return appid;
+}
+
+AppId_t STEAM_APP_ID = getAppID();
 
 //*****************************************************************************
 
