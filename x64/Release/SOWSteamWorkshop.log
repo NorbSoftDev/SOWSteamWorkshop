@@ -1,9 +1,0 @@
-﻿  SOWSteamWorkshop.cpp
-  SOWSteamWorkshopDlg.cpp
-  uploader.cpp
-  Generating code
-  119 of 348 functions (34.2%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    21 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  SOWSteamWorkshop.vcxproj -> E:\NorbSoftDev\SOWSteam\sdk\SOWSteamWorkshop\SOWSteamWorkshop.exe
